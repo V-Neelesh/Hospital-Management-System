@@ -1,0 +1,102 @@
+.container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+}
+
+.title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.searchSection {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.searchInput {
+    padding: 12px 20px;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    outline: none;
+    transition: box-shadow 0.3s;
+}
+
+.searchInput:focus {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-color: #007bff;
+}
+
+.resultsArea {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.statusCard {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid #ccc;
+}
+
+.cardContent h3 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.cardContent p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.statusBadge {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    min-width: 100px;
+    text-align: center;
+}
+
+.pending {
+    background-color: #fff3cd;
+    color: #856404;
+    border-left-color: #ffc107;
+}
+
+.approved {
+    background-color: #d4edda;
+    color: #155724;
+    border-left-color: #28a745;
+}
+
+.rejected {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left-color: #dc3545;
+}
+
+/* Apply border color to card based on status */
+.statusCard.pending { border-left-color: #ffc107; }
+.statusCard.approved { border-left-color: #28a745; }
+.statusCard.rejected { border-left-color: #dc3545; }
+
+.noResults {
+    text-align: center;
+    color: #777;
+    margin-top: 2rem;
+}

@@ -1,0 +1,53 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Backend",
+            "type": "shell",
+            "command": "npm start",
+            "options": {
+                "cwd": "${workspaceFolder}/backend"
+            },
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {
+                    "regexp": "^Server running on port (\\d+)$",
+                    "file": 1,
+                    "location": 2,
+                    "message": 0
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": ".*nodemon.*",
+                    "endsPattern": "Server running on port.*"
+                }
+            },
+            "presentation": {
+                "group": "server",
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Start Frontend",
+            "type": "shell",
+            "command": "npm run dev",
+            "options": {
+                "cwd": "${workspaceFolder}/react"
+            },
+            "isBackground": true,
+            "problemMatcher": [],
+            "presentation": {
+                "group": "client",
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Start All",
+            "dependsOn": ["Start Backend", "Start Frontend"],
+            "problemMatcher": []
+        }
+    ]
+}
