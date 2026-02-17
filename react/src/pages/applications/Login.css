@@ -1,0 +1,83 @@
+.application-form {
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  background: linear-gradient(120deg, #0f172a 0%, #111827 45%, #1f2937 100%);
+  color: #f8fafc;
+  box-sizing: border-box;
+}
+
+.application-form h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  text-align: center;
+}
+
+.application-form__card {
+  width: min(520px, 100%);
+  background: rgba(17, 24, 39, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 18px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.35);
+}
+
+.application-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #cbd5f5;
+}
+
+.application-form__field input,
+.application-form__field select,
+.application-form__field textarea {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+  color: #f8fafc;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.application-form__field input:focus,
+.application-form__field select:focus,
+.application-form__field textarea:focus {
+  outline: 2px solid rgba(99, 102, 241, 0.5);
+  border-color: rgba(99, 102, 241, 0.7);
+}
+
+.application-form__submit {
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 1.5rem;
+  background: #6366f1;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.application-form__submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.35);
+}
+
+@media (max-width: 600px) {
+  .application-form {
+    padding: 2.5rem 1rem;
+  }
+
+  .application-form__card {
+    padding: 1.5rem;
+  }
+}
